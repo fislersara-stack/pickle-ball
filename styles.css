@@ -1,0 +1,131 @@
+:root {
+  --bg: #183226;
+  --card: #234534;
+  --line: #d8e7cb;
+  --accent: #f6d26b;
+  --text: #fffdf7;
+  --muted: #d9e3d1;
+  --danger: #c8493d;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top, #27523d 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  padding: 18px 14px 32px;
+}
+.app {
+  width: min(100%, 460px);
+}
+.screen { display: none; }
+.screen.active { display: block; }
+.card {
+  background: rgba(35, 69, 52, 0.96);
+  border: 2px solid rgba(216, 231, 203, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+#start-screen, #game-over-screen {
+  padding: 28px 22px;
+  text-align: center;
+  margin-top: 24px;
+}
+.title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.title-wrap.small { gap: 6px; }
+.pickle-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+h1, h2 {
+  margin: 0;
+  line-height: 1.02;
+}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 2rem; }
+.tagline {
+  color: var(--muted);
+  font-size: 1.02rem;
+  margin: 14px 0 18px;
+}
+.rules {
+  display: grid;
+  gap: 10px;
+  text-align: left;
+  margin: 0 0 22px;
+}
+.rules p {
+  margin: 0;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+}
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.btn.primary {
+  background: var(--accent);
+  color: #2a2411;
+}
+.hud {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.score-box {
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+}
+.score-box span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.score-box strong {
+  font-size: 1.4rem;
+}
+.center-box strong {
+  font-size: 1rem;
+}
+.court-card {
+  padding: 12px;
+}
+#game-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #7eb168;
+  border-radius: 18px;
+  touch-action: none;
+}
+.controls-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+@media (max-width: 380px) {
+  h1 { font-size: 1.95rem; }
+  .hud { grid-template-columns: 1fr; }
+}

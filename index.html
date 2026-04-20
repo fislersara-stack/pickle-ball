@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Backyard Pickleball</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="start-screen" class="screen card active">
+      <div class="title-wrap">
+        <div class="pickle-icon" aria-hidden="true">🥒</div>
+        <h1>Backyard<br />Pickleball</h1>
+      </div>
+      <p class="tagline">Classic pong, but the ball is a pickle slice.</p>
+      <div class="rules">
+        <p>Drag your paddle on the right side.</p>
+        <p>First to <strong>7</strong> wins.</p>
+        <p>Keep the pickle in play.</p>
+      </div>
+      <button id="start-btn" class="btn primary">Start Match</button>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="hud card">
+        <div class="score-box">
+          <span>Computer</span>
+          <strong id="left-score">0</strong>
+        </div>
+        <div class="score-box center-box">
+          <span>Backyard Pickleball</span>
+          <strong id="status-text">Serve!</strong>
+        </div>
+        <div class="score-box">
+          <span>You</span>
+          <strong id="right-score">0</strong>
+        </div>
+      </header>
+
+      <section class="court-card card">
+        <canvas id="game-canvas" width="360" height="540" aria-label="Backyard Pickleball game"></canvas>
+        <div class="controls-note">Move your finger up and down on the court.</div>
+      </section>
+    </section>
+
+    <section id="game-over-screen" class="screen card">
+      <div class="title-wrap small">
+        <div class="pickle-icon" aria-hidden="true">🥒</div>
+        <h2 id="winner-text">You Win!</h2>
+      </div>
+      <p id="final-score-text" class="tagline">Final Score: 7 - 4</p>
+      <button id="play-again-btn" class="btn primary">Play Again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
